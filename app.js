@@ -1,11 +1,21 @@
 'use strict';
-//Not sure how much is supposed to go here, it wasnt specified in the instructions, hope this works
-function oldProjects(name, link, description){
-    this.name = name;
-    this.link = link;
-    this.description = description;
-}
-var pro1Name = new name('Cookie');
-var pro1link = new link('https://github.com/MartinPelayo/w2audit');
-var pro1descitpion = new description('A cookie Store');
- 
+var data = [
+  {
+    title: '72rpm',
+    author: 'Ivy, Michele, Yuval, Martin',
+    authorUrl: 'https://github.com/MartinPelayo/project-1',
+    body: 'This is the best game on the Internet. It tests the skills of the most musically talented, and turns amatuer programers into prefesionals...'
+  },
+  {
+    title: 'Bus Mall',
+    author: 'Martin',
+    authorUrl: 'https://github.com/MartinPelayo/Week3_resubs',
+    body: 'A site made for the most lucrative company on the planet- BUS MALL',
+  },
+  {
+    title: 'The Salmon Cookie Shop',
+    author: 'Martin',
+    authorUrl: 'https://github.com/MartinPelayo/week2-Resubmissions',
+    body: 'A site for a company who has redifined the art of making gourmet cookies',
+  }
+];
