@@ -19,3 +19,18 @@ var data = [
     body: 'A site for a company who has redifined the art of making gourmet cookies',
   }
 ];
+
+var articleView = {};
+articleView.handleMainNav = function() {
+  $('.main-nav').on('click', '.tab', function() {
+    var $dataGrab = $(this).attr('data-content');
+    console.log($dataGrab);
+
+    $('section[class=tab-content]').hide();
+    var $tryAgain = $('section[id=]' + $dataGrab + ']');
+    $tryAgain.fadeIn();
+  });
+  $('main-nav .tab:first').click();
+};
+articleView.handleMainNav();
+

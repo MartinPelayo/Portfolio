@@ -9,6 +9,7 @@ function Project(options){
 }
 
 Project.prototype.toHtml = function() {
+  $newProject.attr('data-author', this.author);
   var $newProject = $('article.template').clone();
   $newProject.attr('data-category',this.category);
 
@@ -20,10 +21,6 @@ Project.prototype.toHtml = function() {
 console.log('new project', $newProject);
   return $newProject;
 };
-
-// projects.sort(function(currentObject, nextObject) {
-//   return (new Date(nextObject.publishedOn)) - (new Date(currentObject.publishedOn));
-// });
 
 data.forEach(function(ele) {
   projects.push(new Project(ele));
