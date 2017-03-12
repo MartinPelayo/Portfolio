@@ -9,26 +9,32 @@
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="modules.css">
 </head>
-<body> <!--     Tom, my hamburger menu wont stay open any more, I dont get it >:[     -->
-    <header>
+<body background="bg-2-full.jpg"> 
+    <header class="clearfix">
+        <nav class="mobile" class="desktop">   
+        <button>Menu</button>
+        <div class="content">
+            <a href="#" class="home-tab">Home</a>
+            <a href="#" class="project-tab">Projects</a>
+            <a href="https://github.com/MartinPelayo" target="_blank" class="github-tab">GitHub</a></li>
+            <a href="#" class="about-tab">About</a>
+        </div>
+        </nav>
     </header>
-    <div class="dropdown" class="background">
-        <input class="test" type="image" src="hamburgers-icon.png"/>
-        <ul class="dropdown-content">
-            <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
-            <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>  
-            <li><a href="https://github.com/MartinPelayo" target="_blank" class="icon-github"> GitHub</a></li>
-        </ul>
-    </div>
+    <section id="articles">
         <article class="template" data-category="placeholder-category">
-            <header>
-                <h1>Title</h1>
+                <h1></h1>
                 <div class="byline">
-                     <address><a href="">Author Name</a></address>
+                     <address><a href=""></a></address>
                 </div>
-            </header>
             <section class="article-body"></section>
         </article>
+    </section>
+    <section class="Home">
+        <h1>Home test</h1>
+    </section>
+    <section class="About">
+        <h1>About test</h1>
     </section>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="app.js"></script>

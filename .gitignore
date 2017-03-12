@@ -11,64 +11,243 @@ githubToken.js
 node_modules
 
 
-//  Configure a view object, to hold all our functions for dynamic updates and article-related event handlers.
+//The following HTML code was for the Filters, this may or may not work,\\
+//alike the second function bellow, the 1st has to work to begin trouble shoootin..\\
+     <div>
+          <ul id="filters">
+            <li>
+              <select id="author-filter">
+                <option value="">-- Filter by Authors --</option>
+              </select>
+            </li>
+            <li>
+              <select id="category-filter">
+                <option value="">-- Filter by Categories --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
 
-// articleView.populateFilters = function() {
-//   $('article').not('.template').each(function() {
-//     var authorName, category, optionTag;
-//     authorName = $(this).find('address a').text();
-//     optionTag = '<option value="' + authorName + '">' + authorName + '</option>';
-//     $('#author-filter').append(optionTag);
-//     category = $(this).attr('data-category');
-//     optionTag = '<option value="' + category + '">' + category + '</option>';
-//     if ($('#category-filter option[value="' + category + '"]').length === 0) {
-//       $('#category-filter').append(optionTag);
-//     }
-//   });
-// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//The following JS code is for the filters, work on later if time is availabe
+
+The populateFilter functio I would still have to finish, the 
+example code is bellow some where...
+projectsApear.popTheFilters = function() {
+  $('article').not('template').each(function() {
+    
+  })
+}
+
+This one is prasumably finished and working? Not sure, 
+have to finish the above function to text this one...
+projectsApear.engageAuthorFilter = function() {
+  $('#author-filter').on('change', function() {
+    if($(this).val()) {
+      $('article').hide();
+      var test = $('article[data-author="' + $(this).val() + '"]'.fadeIn() ) ;
+      console.log('Is this working?:' + test);
+    }
+    $('#category-filter').val('');
+  });
+};
+projectsApear.engageAuthorFilter();
+
+
+
+
+
+
+//Below Code is example code\\
+
 // articleView.handleAuthorFilter = function() {
 //   $('#author-filter').on('change', function() {
 //     if ($(this).val()) {
-//       /* TODO: If the select box changes to an option that has a value, we should:
-//           1. Hide all of the articles
-//           2. Fade in only the articles that match based on on the author
-//             that was aselected. Hint: use an attribute selector to find
-//             those articles that match the value, and then fade them in.
-//         */
-//       $('article').hide();
-//       // $('article').attr('author-data').val($(this).val()).fadeIn();
-//       var $turtle = $('article[data-author="' + $(this).val() + '"]').fadeIn();
-//       console.log('does this work?', $turtle);
-//     } else {
-//     /* Otherwise, we should:
-//         1. Show all the articles except the template */
+      /* TODO: If the select box changes to an option that has a value, we should:
+          1. Hide all of the articles
+          2. Fade in only the articles that match based on on the author
+            that was aselected. Hint: use an attribute selector to find
+            those articles that match the value, and then fade them in.
+        */
+      // $('article').hide();
+      // $('article').attr('author-data').val($(this).val()).fadeIn();
+      // var $turtle = $('article[data-author="' + $(this).val() + '"]').fadeIn();
+    //   console.log('does this work?', $turtle);
+    // } else {
+    /* Otherwise, we should:
+        1. Show all the articles except the template */
 
 
 //     }
 //     $('#category-filter').val('');
 //   });
 // };
-// articleView.handleMainNav = function () {
+
+
+// var projectsApear = {};
+// $('#articles').hide();
+// projectsApear.pAHandler = function() {
+// $('#author-filter').on('click', fucntion()
+//   var $
+// )   Nor this...
+
+//I may not need this...?
+// var projectsApear = {};
+// projectsApear.handleMainNav = function() {
 //   $('.main-nav').on('click', '.tab', function() {
-//     /* done TODO:
-//       1. Hide all of the .tab-content sections
-      
-//       2. Fade in the single .tab-content section that is
-//         associated with the .tab element's data-content attribute.
-//     */
 //     var $dataGrab = $(this).attr('data-content');
 //     console.log($dataGrab);
 
 //     $('section[class=tab-content]').hide();
-//     var $tryAgain = $('section[id=' + $dataGrab + ']');
-//     console.log($tryAgain);
+//     var $tryAgain = $('section[id=]' + $dataGrab + ']');
 //     $tryAgain.fadeIn();
-
-
-
 //   });
-//   $('.main-nav .tab:first').click();
+//   $('main-nav .tab:first').click();
 // };
-// articleView.populateFilters();
-// articleView.handleAuthorFilter();
-// articleView.handleMainNav();
+// projectsApear.handleMainNav();
+
+projectsApear.engageAuthorFilter();
+
+
+
+articleView.populateFilters = function() {
+  $('article').not('.template').each(function() {
+    var authorName, category, optionTag;
+    authorName = $(this).find('address a').text();
+    optionTag = '<option value="' + authorName + '">' + authorName + '</option>';
+    $('#author-filter').append(optionTag);
+    category = $(this).attr('data-category');
+    optionTag = '<option value="' + category + '">' + category + '</option>';
+    if ($('#category-filter option[value="' + category + '"]').length === 0) {
+      $('#category-filter').append(optionTag);
+    }
+  });
+};
+
+Before I tried redoing the hambuger menu...
+////////HTML\\\\\\\\
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="modules.css">
+</head>
+<body> 
+    <header class="clearfix">
+        <input class="dropdown" class="test" type="image" src="hamburgers-icon.png"/>
+        <div class="dropdown-content">
+            <a href="#" class="home-tab">Home</a>
+            <a href="#" class="project-tab">Projects</a>
+            <a href="https://github.com/MartinPelayo" target="_blank" class="github-tab">GitHub</a></li>
+            <a href="#" class="about-tab">About</a>
+        </div>
+    </header>
+    <section id="articles">
+        <article class="template" data-category="placeholder-category">
+                <h1></h1>
+                <div class="byline">
+                     <address><a href=""></a></address>
+                </div>
+            <section class="article-body"></section>
+        </article>
+    </section>
+    <section class="Home">
+        <h1>Home test</h1>
+    </section>
+    <section class="About">
+        <h1>About test</h1>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script src="jQ.js"></script>
+</body>
+</html>
+
+/////////css\\\\\\\\\
+.clearfix::after {
+content: "";
+display: table;
+clear: both;
+}   
+
+.background{
+    background-color: lightgrey;
+    height: 100px;
+}
+  
+.dropdown {
+    float: left;
+    padding-right: 50px;
+}
+
+.dropdown-content {
+    display: none;
+    /*float:left;*/
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    /*display: block;*/
+}
+
+.dropdown-content :hover {
+    background-color: #f1f1f1;
+    }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+@media only screen and (min-width: 900px) {  
+    .test{
+        display: none;
+    }
+    .dropdown {
+        display: block; 
+    }
+    .dropdown-content {
+        display:   block;
+        /*padding: 0px 100px 0px 100px;*/
+        text-align: center;
+        background-color: grey;
+        padding: 0px;
+        margin: 0px;
+
+        
+    }
+    .dropdown-content li {
+        display: inline-block;
+        text-align: center;
+        padding: 50px 100px 50px 100px;
+        background-color: grey;
+        margin: 0px;
+    }
+
+}
+
+ 

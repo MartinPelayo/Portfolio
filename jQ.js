@@ -9,8 +9,8 @@ function Project(options){
 }
 
 Project.prototype.toHtml = function() {
-  $newProject.attr('data-author', this.author);
   var $newProject = $('article.template').clone();
+  // $newProject.attr('data-author', this.author); I think I placed this here for the filter goal...
   $newProject.attr('data-category',this.category);
 
   $newProject.find('address').children().text(this.author);

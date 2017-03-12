@@ -1,36 +1,57 @@
 'use strict';
+var projectsApear = {};
 var data = [
   {
     title: '72rpm',
     author: 'Ivy, Michele, Yuval, Martin',
     authorUrl: 'https://github.com/MartinPelayo/project-1',
-    body: 'This is the best game on the Internet. It tests the skills of the most musically talented, and turns amatuer programers into prefesionals...'
+    body: 'This is a Game',
   },
   {
     title: 'Bus Mall',
     author: 'Martin',
     authorUrl: 'https://github.com/MartinPelayo/Week3_resubs',
-    body: 'A site made for the most lucrative company on the planet- BUS MALL',
+    body: 'Website for Bus Mall',
   },
   {
     title: 'The Salmon Cookie Shop',
     author: 'Martin',
     authorUrl: 'https://github.com/MartinPelayo/week2-Resubmissions',
-    body: 'A site for a company who has redifined the art of making gourmet cookies',
+    body: 'A site for a gourmet cookie company',
   }
 ];
 
-var articleView = {};
-articleView.handleMainNav = function() {
-  $('.main-nav').on('click', '.tab', function() {
-    var $dataGrab = $(this).attr('data-content');
-    console.log($dataGrab);
+//THIS CAN BE REFACTORED WAY DOWN, WAY TOO MUCH REPEATED CODE.
+$(document).ready(function() {
+  $('#articles').hide();
+  $('.Home').hide();
+  $('.About').hide();
+});
 
-    $('section[class=tab-content]').hide();
-    var $tryAgain = $('section[id=]' + $dataGrab + ']');
-    $tryAgain.fadeIn();
+$(document).ready(function(){
+  $('.home-tab').on('click', function(){
+    $('.Home').show();
+    $('.About').hide();
+    $('#articles').hide();
   });
-  $('main-nav .tab:first').click();
-};
-articleView.handleMainNav();
+});
 
+$(document).ready(function(){
+  $('.project-tab').on('click', function(){
+    $('#articles').show();
+    $('.About').hide();
+    $('.Home').hide();
+  });
+});
+
+$(document).ready(function(){
+  $('.about-tab').on('click', function(){
+    $('.About').show();
+    $('.Home').hide();
+    $('#articles').hide();
+  });
+});
+
+$('button').click(function() {
+  $(this).toggleClass('expanded').siblings('div').slideToggle();
+});
