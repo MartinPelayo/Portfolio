@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="modules.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </head>
 <body background="bg-2-full.jpg"> 
     <header class="clearfix">
@@ -36,7 +37,21 @@
     <section class="About">
         <h1>About test</h1>
     </section>
+     <script id="entry-template" type="text/x-handlebars-template">
+        <article data-category="{{category}}">
+          <header>
+            <h1>{{title}}</h1>
+            <div class="byline">
+            By <address><a href="{{authorUrl}}">{{author}}</a></address>
+            published <time pubdate datetime="2000-01-01">{{publishedOn}}</time>
+            </div>
+          </header>
+          <section class="article-body">{{{body}}}</section>
+          <a href="#" class="read-on">Read on →</a>
+        </article>
+    </script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="app.js"></script>
     <script src="jQ.js"></script>
 </body>
