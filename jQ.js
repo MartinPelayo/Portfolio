@@ -1,5 +1,6 @@
 'use strict';
 var projects = [];
+// var json = require('data.json');
 
 function Project(options){
   this.title = options.title;
@@ -8,19 +9,7 @@ function Project(options){
   this.body = options.body;
 }
 
-// Project.prototype.toHtml = function() {
-//   var $newProject = $('article.template').clone();
-//   // $newProject.attr('data-author', this.author); I think I placed this here for the filter goal...
-//   $newProject.attr('data-category',this.category);
-
-//   $newProject.find('address').children().text(this.author);
-//   $newProject.find('a[href]').attr('href', this.authorUrl);
-//   $newProject.find('h1').text(this.title);
-//   $newProject.find('section.article-body').html(this.body);
-//   $newProject.removeClass('template');
-// console.log('new project', $newProject);
-//   return $newProject;
-// };
+Project.all = [];
 
 Project.prototype.toHtml = function() {
   var source = $('#entry-template').html();
@@ -33,14 +22,44 @@ Project.prototype.toHtml = function() {
   return html;
 }
 
+// data.forEach(function(ele) {
+//   projects.push(new Project(ele));
+// });
 
-data.forEach(function(ele) {
-  projects.push(new Project(ele));
-});
+// projects.forEach(function(project) {
+//     console.log('project', project);
+//   $('#articles').append(project.toHtml());
+// });
 
-projects.forEach(function(project) {
-    console.log('project', project);
-  $('#articles').append(project.toHtml());
-});
+Project.loadAll = function(data) {
+  data.sort(function(a,b){
+    return(new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  });
+
+  data.forEach(function(ele) {
+    Project.all.push(new Project(ele));
+  })
+}
 
 
+
+
+
+
+Project.fetchAll = function(){
+
+if (localStorage.stored_data) {
+  var storedData = localStorage.getItem('stored_data');
+  Project.loadAll(storedData);
+  console.log('working', storedData);
+} else {
+  $.ajax({
+    url:'data.json',
+    method: 'GET',
+    success: function(data){
+      localStorage.setItem('stored_data',JSON.stringify(data));
+      Project.loadAll(data);
+    }
+  })
+}
+}

@@ -250,4 +250,17 @@ clear: both;
 
 }
 
- 
+ This was for lab 3? Not sure if I need it..Left it in my code commented out for some reason
+ // Project.prototype.toHtml = function() {
+//   var $newProject = $('article.template').clone();
+//   // $newProject.attr('data-author', this.author); I think I placed this here for the filter goal...
+//   $newProject.attr('data-category',this.category);
+
+//   $newProject.find('address').children().text(this.author);
+//   $newProject.find('a[href]').attr('href', this.authorUrl);
+//   $newProject.find('h1').text(this.title);
+//   $newProject.find('section.article-body').html(this.body);
+//   $newProject.removeClass('template');
+// console.log('new project', $newProject);
+//   return $newProject;
+// };
