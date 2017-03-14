@@ -3,6 +3,8 @@ logs
 *.log
 .DS_Store
 
+node_modules
+
 # Secrets
 githubToken.js
 
