@@ -1,11 +1,8 @@
 body {
   background-repeat: no-repeat;
-  /*background-size: 80%;*/
-  /*max-width: 100%;*/
-  background-position: 50% 50%;
-  min-width: 100%;
-  
+  background-size: 100%;
 }
+
 .clearfix::after {
 content: "";
 display: table;
@@ -16,8 +13,9 @@ clear: both;
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: lightgrey;
+    background-color: rgba(166, 153, 100, 0.5);
     text-align: center;
+    margin-top: 16px;
 }
 
 div a {
@@ -34,7 +32,7 @@ div a:hover {
 button {
     border: 0;
     font-size: 30px;
-    background: lightgrey;
+    background: rgba(166, 153, 100, 0.5);
 }
 button:hover{
     background-color: grey;
@@ -45,22 +43,22 @@ button:hover{
 .Home {
     text-align: center;
     font-size: 20px;
-    background-color: wheat;
-    margin-top: 400px;
+    background-color: (166, 153, 100, 0.5);
+    margin-top: 100px;
 }
 
 .About{
     text-align: center;
     font-size: 20px;
-    background-color: wheat;
-    margin-top: 400px;
+    background-color: (166, 153, 100, 0.5);
+    margin-top: 100px;
 }
 
 #articles {
       text-align: center;
     font-size: 20px;
-    margin-top: 300px;
-    background-color: wheat;
+    margin-top: 100px;
+    background-color: (166, 153, 100, 0.5);
 
 }
 
