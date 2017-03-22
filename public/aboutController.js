@@ -8,9 +8,11 @@
     }
 
     aboutController.render = function(){
-        $('.testing').hide();
+        $('.home-class').hide();
+        $('.project-class').hide();
         $('.About').fadeIn();
     }
 
     module.aboutController = aboutController;
 })(window);
+//Think Im good here
