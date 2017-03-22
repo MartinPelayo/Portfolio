@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet" href="modules.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </head>
 <body background="Website-Design-Background.png"> 
@@ -16,12 +16,6 @@
         <nav class="mobile" class="desktop">   
         <button>Menu</button>
         <div class="content">
-            <!-- Leaving for reference, remove when done with lab -->
-            <!--<a href="#" class="home-tab">Home</a>
-            <a href="#" class="project-tab">Projects</a>
-            <a href="https://github.com/MartinPelayo" target="_blank" class="github-tab">GitHub</a></li>
-            <a href="#" class="about-tab">About</a>
-            For 11-11 Portfolio assignment-->
             <a href="/home" class="home-tab">Home</a>
             <a href="/projects" class="project-tab">Projects</a>
             <a href="https://github.com/MartinPelayo" target="_blank" class="github-tab">GitHub</a>
@@ -56,15 +50,32 @@
           <section class="article-body">{{{body}}}</section>
           <a href="#" class="read-on">Read on →</a>
         </article>
+<!--dopn this section here for testing-->
+    <section id="about" class="tab-content">
+        <header>
+          Welcome to my Blog
+        </header>
+        <section>
+          <h1>Some of my intrests:</h1>
+          <ul>
+            <li>Coding</li>
+            <li>Sharing what I've learned</li>
+            <li>Hanging with my family</li>
+          </ul>
+        </section>
+
     </script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-      <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <script src="page.js"></script>
-    <script src="app.js"></script>
-    <script src="jQ.js"></script>
-    <script src="aboutController.js"></script>
-    <script src="articleController.js"></script>
-    <script src="routes.js"></script>
+    <script src="scripts/page.js"></script>
+    <script src="scripts/models/githubToken.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/jQ.js"></script>
+    <script src="scripts/controllers/aboutController.js"></script>
+    <script src="scripts/controllers/articleController.js"></script>
+    <script src="scripts/models/repo.js"></script>
+    <script src="/scripts/views/repoView.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
 </body>
 </html>
