@@ -23,12 +23,13 @@
             <a href="#" class="about-tab">About</a>
             For 11-11 Portfolio assignment-->
             <a href="/home" class="home-tab">Home</a>
-            <a href="/prjects" class="project-tab">Projects</a>
+            <a href="/projects" class="project-tab">Projects</a>
             <a href="https://github.com/MartinPelayo" target="_blank" class="github-tab">GitHub</a>
             <a href="/about" class="about-tab">About</a>
         </div>
         </nav>
     </header>
+    <h1>The home and about tabs are not working yet, Ill have to finsih the later.</h1>
     <section id="articles">
         <article class="template" data-category="placeholder-category">
                 <h1></h1>
@@ -38,14 +39,14 @@
             <section class="article-body"></section>
         </article>
     </section>
-    <section class="testing" class="Home">
+    <section class="home-class" class="Home">
         <h1>Home test</h1>
     </section>
-    <section class="testing" class="About">
+    <section class="About-class">
         <h1>About test</h1>
     </section>
      <script id="entry-template" type="text/x-handlebars-template">
-        <article data-category="{{category}}">
+        <article class="project-class" data-category="{{category}}">
           <header>
             <h1>{{title}}</h1>
             <div class="byline">
@@ -63,7 +64,7 @@
     <script src="app.js"></script>
     <script src="jQ.js"></script>
     <script src="aboutController.js"></script>
-    <!--<script src="articleController.js"></script>-->
+    <script src="articleController.js"></script>
     <script src="routes.js"></script>
 </body>
 </html>

@@ -1,15 +1,15 @@
 'use strict';
 // $(document).ready(function() {
-//   $('#articles').hide();
-//   $('.Home').hide();
-//   $('.About').hide();
+$('#articles').hide();
+$('.Home').hide();
+$('.About').hide();
 // });
 
 // $(document).ready(function(){
 //   $('.home-tab').on('click', function(){
 //     $('.Home').show();
 //     $('.About').hide();
-//     $('#articles').hide();
+   //  $('#articles').hide();
 //   });
 // });
 
